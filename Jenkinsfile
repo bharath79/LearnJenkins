@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label 'docker' 
-  }
+  agent any
     environment{
 	    //it uses id stored in manage creds
         DOCKERHUB_CREDS = credentials('dockerhub')
