@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Docker Login') {
             steps {
-                sh 'docker login -u 'bharath792' -p 'killermode'
+                sh 'docker login -u bharath792 -p killermode
                 //sh 'echo $DOCKERHUB_CREDS_PSW | docker login -u $DOCKERHUB_CREDS_USR --password-stdin'                
                 }
             }
