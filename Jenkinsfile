@@ -4,7 +4,14 @@ pipeline {
 	    //it uses id stored in manage creds
         DOCKERHUB_CREDS = credentials('dockerhub')
     }
+	
     stages {
+	 stage('Initialize')
+    	{
+        def dockerHome = tool 'MyDocker'
+        def mavenHome  = tool 'MyMaven'
+        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
+    	}
         stage('Clone Repo') {
             steps {
                 checkout scm
