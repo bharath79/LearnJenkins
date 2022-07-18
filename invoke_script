@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Invokde Lamda') {
+            steps {
+               sh 'aws lambda invoke --function-name demo response.json --region us-west-2'
+            }
+        }
+        stage('Display Lamda') {
+            steps {
+               sh 'cat response.json'
+            }
+        }
+    }
+}
