@@ -1,5 +1,5 @@
 ## What this does?
-This repo demonstrates how to create Jenkinsfile to build and push a docker image, tagged with custom build number or latest
+This repo demonstrates how to create Jenkinsfile to build and push a docker image, tagged with custom build number or the latest
 
 ## Jenkins setup
 Jenkins is installed on EC2. Follow the instructions on https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/ . You can skip "Configure a Cloud" part for this demo. Please note some commands from this link might give errors, below are the workarounds:
