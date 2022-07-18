@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Invokde Lamda') {
+            steps {
+               sh 'cat README.md'
+            }
+        }
+        
+    }
+}
